@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NexSynaptic - Ethical, transparent and human-centered AI platform. Build trustworthy AI systems with governance, compliance, and safety tooling.">
+    <meta name="keywords" content="AI governance, AI compliance, EU AI Act, ethical AI, trustworthy AI, responsible AI">
+    <meta name="author" content="NexSynaptic">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nexsynaptic.ai/">
+    <meta property="og:title" content="NexSynaptic - Ethical AI Platform">
+    <meta property="og:description" content="Build trustworthy AI systems with governance, compliance, and safety tooling.">
+    <meta property="og:image" content="https://nexsynaptic.ai/og-image.webp">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics (Async) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <title>NexSynaptic - Ethical AI Platform</title>
+    
+    <style>
+        /* CSS Variables - Critical Styles Only */
+        :root {
+            --color-bg: #ffffff;
+            --color-bg-secondary: #f8f9fa;
+            --color-bg-tertiary: #f0f7ff;
+            --color-text: #1a1a1a;
+            --color-text-secondary: #666666;
+            --color-border: #e8e8e8;
+            --color-primary: #0a84ff;
+            --color-primary-dark: #0066cc;
+            --color-accent: #7dd3fc;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 20px 40px rgba(10, 132, 255, 0.15);
+        }
+
+        [data-theme="dark"] {
+            --color-bg: #0f0f0f;
+            --color-bg-secondary: #1a1a1a;
+            --color-bg-tertiary: #1a2332;
+            --color-text: #f0f0f0;
+            --color-text-secondary: #b0b0b0;
+            --color-border: #333333;
+            --color-primary: #4da6ff;
+            --color-primary-dark: #0a84ff;
+            --color-accent: #5bc0de;
+        }
+
+        /* Critical rendering path - minimal blocking */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-display: swap;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+            z-index: 1000;
+            padding: 1.2rem 2rem;
+            transition: all 0.3s ease;
+            will-change: transform;
+        }
+
+        [data-theme="dark"] nav {
+            background: rgba(15, 15, 15, 0.95);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+            flex-shrink: 0;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--color-primary);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.3rem;
+            transition: transform 0.3s ease;
+            padding: 0.5rem;
+            color: var(--color-text);
+            flex-shrink: 0;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        /* Hero Section - Optimized */
+        .hero {
+            margin-top: 70px;
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg) 100%);
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+            contain: layout style paint;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(10, 132, 255, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+            will-change: opacity;
+        }
+
+        .hero-bg-animation {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+            opacity: 0.1;
+            contain: strict;
+        }
+
+        .neural-dot {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--color-primary);
+            opacity: 0.6;
+            will-change: transform;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(-20px) translateX(10px); }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+            background: linear-gradient(135deg, var(--color-text) 0%, var(--color-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 2rem;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+
+        .hero-divider {
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+            margin: 0 auto 2.5rem;
+            opacity: 0.7;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .btn {
+            padding: 0.9rem 2.2rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: 2px solid;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            will-change: transform, box-shadow;
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: white;
+            border-color: var(--color-primary);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-primary-dark);
+            border-color: var(--color-primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-bg-tertiary);
+            transform: translateY(-2px);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            contain: content;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--color-text);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--color-text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.9s ease;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            padding: 2.5rem;
+            border-radius: 0.8rem;
+            background: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            will-change: transform, box-shadow;
+            contain: layout style paint;
+        }
+
+        .feature-card:nth-child(1) { animation-delay: 0.1s; }
+        .feature-card:nth-child(2) { animation-delay: 0.2s; }
+        .feature-card:nth-child(3) { animation-delay: 0.3s; }
+        .feature-card:nth-child(4) { animation-delay: 0.4s; }
+        .feature-card:nth-child(5) { animation-delay: 0.5s; }
+        .feature-card:nth-child(6) { animation-delay: 0.6s; }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--color-primary);
+            background: var(--color-bg-tertiary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--color-text);
+        }
+
+        .feature-card p {
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* Mission Section */
+        .mission {
+            padding: 6rem 2rem;
+            background: var(--color-bg-secondary);
+            border-top: 1px solid var(--color-border);
+            contain: content;
+        }
+
+        .mission-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .mission h2 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            color: var(--color-text);
+        }
+
+        .mission-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .mission-point {
+            display: flex;
+            gap: 1.5rem;
+            animation: fadeInUp 1s ease;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            contain: layout style;
+        }
+
+        .mission-point:nth-child(1) { animation-delay: 0.1s; }
+        .mission-point:nth-child(2) { animation-delay: 0.2s; }
+        .mission-point:nth-child(3) { animation-delay: 0.3s; }
+        .mission-point:nth-child(4) { animation-delay: 0.4s; }
+        .mission-point:nth-child(5) { animation-delay: 0.5s; }
+        .mission-point:nth-child(6) { animation-delay: 0.6s; }
+
+        .mission-point-icon {
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .mission-point h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-text);
+        }
+
+        .mission-point p {
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 6rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            contain: content;
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .faq-item {
+            border: 1px solid var(--color-border);
+            border-radius: 0.8rem;
+            background: var(--color-bg-secondary);
+            overflow: hidden;
+            animation: fadeInUp 1s ease;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            contain: layout style;
+        }
+
+        .faq-item:nth-child(1) { animation-delay: 0.1s; }
+        .faq-item:nth-child(2) { animation-delay: 0.2s; }
+        .faq-item:nth-child(3) { animation-delay: 0.3s; }
+        .faq-item:nth-child(4) { animation-delay: 0.4s; }
+        .faq-item:nth-child(5) { animation-delay: 0.5s; }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--color-text);
+            background: var(--color-bg-secondary);
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background: var(--color-bg-tertiary);
+            color: var(--color-primary);
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            will-change: max-height, padding;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 6rem 2rem;
+            background: var(--color-bg-secondary);
+            max-width: 1200px;
+            margin: 0 auto;
+            contain: content;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            border: 1px solid var(--color-border);
+            border-radius: 0.8rem;
+            padding: 2.5rem;
+            background: var(--color-bg);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            will-change: transform, box-shadow;
+            contain: layout style paint;
+        }
+
+        .project-card:nth-child(1) { animation-delay: 0.1s; }
+        .project-card:nth-child(2) { animation-delay: 0.2s; }
+        .project-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .project-card:hover {
+            border-color: var(--color-primary);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+
+        .project-badge {
+            display: inline-block;
+            background: var(--color-primary);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
+
+        .project-card p {
+            color: var(--color-text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .project-features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .project-features li {
+            padding: 0.5rem 0;
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-features li::before {
+            content: "✓";
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--color-primary) 0%, #0066cc 100%);
+            text-align: center;
+            color: white;
+            contain: content;
+        }
+
+        .final-cta h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-bg-secondary);
+            border-top: 1px solid var(--color-border);
+            color: var(--color-text);
+            padding: 4rem 2rem;
+            text-align: center;
+            contain: content;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--color-border);
+            padding-top: 2rem;
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Lazy load placeholder */
+        .lazy-placeholder {
+            background: var(--color-bg-secondary);
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-right {
+                gap: 1.5rem;
+            }
+
+            nav a {
+                display: none;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .features-grid,
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Prefers reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">NexSynaptic</div>
+            <div class="nav-right">
+                <a href="#features">Features</a>
+                <a href="#mission">Vision</a>
+                <a href="#faq">FAQ</a>
+                <a href="#projects">Projects</a>
+                <a href="https://github.com/nexsynaptic" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-animation" id="bgAnimation"></div>
+        <div class="hero-content">
+            <h1>NexSynaptic AI</h1>
+            <div class="hero-divider"></div>
+            <p class="tagline">
+                Ethical, transparent and human-centered AI platform.<br>
+                Build trustworthy AI systems with governance, compliance, and safety.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://github.com/nexsynaptic" class="btn btn-primary" rel="noopener noreferrer">Explore on GitHub →</a>
+                <a href="https://nexsynaptic.com" class="btn btn-secondary" rel="noopener noreferrer">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2 class="section-title">What We Build</h2>
+        <p class="section-subtitle">
+            NexSynaptic provides comprehensive tooling for AI governance, compliance, and responsible deployment.
+        </p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚖️</div>
+                <h3>AI Governance</h3>
+                <p>Comprehensive governance frameworks and compliance tooling for enterprise AI systems. Align with EU AI Act and emerging global regulations.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>System Classification</h3>
+                <p>High-integrity AI system classification engine. Instant Annex III categorization with 100% coverage of high-risk categories.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Safety & Trust</h3>
+                <p>Build trustworthy AI frameworks with transparency and explainability. Developer-friendly tools for safe deployment and monitoring.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Compliance Tooling</h3>
+                <p>Automated compliance checking and documentation. Stay ahead of regulatory requirements with continuous assessment.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔬</div>
+                <h3>Research & Innovation</h3>
+                <p>Active research in responsible AI. Experimentation and development of next-generation AI safety techniques.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>Human-Centered Design</h3>
+                <p>AI systems that preserve human dignity and agency. Purpose-built tools that enhance human capability, not replace it.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission" id="mission">
+        <div class="mission-content">
+            <h2>Our Vision</h2>
+            <p style="color: var(--color-text-secondary); font-size: 1.1rem; margin-bottom: 3rem;">
+                To redefine how people interact with artificial intelligence by creating systems that are ethical by design, transparent in operation, and aligned with human values.
+            </p>
+
+            <div class="mission-points">
+                <div class="mission-point">
+                    <div class="mission-point-icon">✨</div>
+                    <div>
+                        <h4>Ethical by Design</h4>
+                        <p>Human dignity first. Every system is built with fairness, accountability, and transparency at its core.</p>
+                    </div>
+                </div>
+
+                <div class="mission-point">
+                    <div class="mission-point-icon">🔍</div>
+                    <div>
+                        <h4>Explainability Over Opacity</h4>
+                        <p>Users and developers understand why decisions are made. No black boxes. Full transparency in operation.</p>
+                    </div>
+                </div>
+
+                <div class="mission-point">
+                    <div class="mission-point-icon">⚡</div>
+                    <div>
+                        <h4>Safety Over Speed</h4>
+                        <p>Rigorous testing, validation, and governance. We prioritize reliability and safety in every deployment.</p>
+                    </div>
+                </div>
+
+                <div class="mission-point">
+                    <div class="mission-point-icon">📜</div>
+                    <div>
+                        <h4>Regulatory Alignment</h4>
+                        <p>Compliant with global AI governance frameworks. EU AI Act, responsible AI initiatives, and emerging standards.</p>
+                    </div>
+                </div>
+
+                <div class="mission-point">
+                    <div class="mission-point-icon">🌐</div>
+                    <div>
+                        <h4>Open Knowledge</h4>
+                        <p>Shared progress and collaborative innovation. Contributing to the AI safety and governance community.</p>
+                    </div>
+                </div>
+
+                <div class="mission-point">
+                    <div class="mission-point-icon">🎯</div>
+                    <div>
+                        <h4>Accessible to All</h4>
+                        <p>From startups to enterprises. AI governance and safety tools for organizations of all sizes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+            Find answers to common questions about NexSynaptic and our AI governance tools.
+        </p>
+
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What is the EU AI Act compliance tool?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Our EU AI Act Compliance MVP is a complete Annex III classification engine that instantly categorizes AI systems as high-risk or not. It provides 100% coverage of regulatory categories with results in approximately 2 seconds. Perfect for organizations ensuring compliance with European regulations.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How does NexSynaptic ensure AI safety?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    We prioritize safety through rigorous testing, continuous validation, and governance frameworks. Our tools include explainability features, audit trails, and automated compliance checking. We believe safety over speed, ensuring every deployment meets our high standards.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I use NexSynaptic tools for free?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! Many of our tools are open-source under the MIT License and available on GitHub. Our EU AI Act Compliance MVP is available for experimentation. For enterprise solutions and custom implementations, contact us for licensing details.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Who is NexSynaptic designed for?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    NexSynaptic serves organizations of all sizes—from startups building their first AI system to enterprises with complex AI portfolios. Our tools are designed for developers, compliance teams, and AI governance specialists who value ethical, transparent, and responsible AI.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How can I contribute to NexSynaptic?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    We welcome collaboration! Visit our GitHub repository to explore projects, report issues, submit pull requests, or start discussions. Whether you're interested in AI governance, compliance tooling, or safety research, there's a way to contribute.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2 class="section-title">Our Projects</h2>
+        <p class="section-subtitle">
+            Advanced tools and frameworks for responsible AI deployment and governance.
+        </p>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <span class="project-badge">Private</span>
+                <h3>EU AI Act Compliance MVP</h3>
+                <p>
+                    A complete Annex III classification engine for high-risk AI systems. Instant classification with 100% coverage of regulatory categories.
+                </p>
+                <ul class="project-features">
+                    <li>100% Annex III coverage</li>
+                    <li>Instant classification (≈2 seconds)</li>
+                    <li>FastAPI + Streamlit</li>
+                    <li>17 automated tests</li>
+                    <li>MIT License</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <span class="project-badge">Active</span>
+                <h3>AI Governance Platform</h3>
+                <p>
+                    Comprehensive tooling for managing AI systems throughout their lifecycle. From design through deployment and monitoring.
+                </p>
+                <ul class="project-features">
+                    <li>System lifecycle management</li>
+                    <li>Risk assessment tools</li>
+                    <li>Documentation automation</li>
+                    <li>Compliance tracking</li>
+                    <li>Developer-friendly API</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <span class="project-badge">Upcoming</span>
+                <h3>Trustworthy AI Research</h3>
+                <p>
+                    Active research and experimentation in responsible AI. Building next-generation safety and governance frameworks.
+                </p>
+                <ul class="project-features">
+                    <li>Safety research initiatives</li>
+                    <li>Fairness & bias assessment</li>
+                    <li>Explainability techniques</li>
+                    <li>Open-source frameworks</li>
+                    <li>Academic partnerships</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <h2>Ready to Build Trustworthy AI?</h2>
+        <p>
+            Join the NexSynaptic community. Explore our tools, contribute to responsible AI development, and help shape the future of ethical AI systems.
+        </p>
+        <a href="https://github.com/nexsynaptic" class="btn btn-secondary" rel="noopener noreferrer">Get Started on GitHub →</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://nexsynaptic.com" target="_blank" rel="noopener noreferrer">Website</a>
+                <a href="https://github.com/nexsynaptic" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://github.com/nexsynaptic/nexsynaptic" target="_blank" rel="noopener noreferrer">Main Repository</a>
+                <a href="https://nexsynaptic.com/contact" target="_blank" rel="noopener noreferrer">Contact</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NexSynaptic. All rights reserved. | Ethical AI by Design</p>
+            </div>
+        </div>
+    </footer>
+
+    <script defer>
+        // Dark Mode Toggle (Non-blocking)
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-theme', savedTheme);
+        updateThemeToggle();
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeToggle();
+        });
+
+        function updateThemeToggle() {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            themeToggle.textContent = currentTheme === 'light' ? '🌙' : '☀️';
+        }
+
+        // Background animation (Optimized)
+        function createBackgroundAnimation() {
+            const bgAnimation = document.getElementById('bgAnimation');
+            const fragment = document.createDocumentFragment();
+            
+            for (let i = 0; i < 8; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'neural-dot';
+                const size = Math.random() * 100 + 20;
+                dot.style.width = size + 'px';
+                dot.style.height = size + 'px';
+                dot.style.left = Math.random() * 100 + '%';
+                dot.style.top = Math.random() * 100 + '%';
+                dot.style.animationDelay = Math.random() * 2 + 's';
+                fragment.appendChild(dot);
+            }
+            bgAnimation.appendChild(fragment);
+        }
+        createBackgroundAnimation();
+
+        // FAQ functionality (Event delegation)
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.faq-question')) {
+                const faqItem = e.target.closest('.faq-item');
+                faqItem.classList.toggle('active');
+            }
+        });
+
+        // Google Analytics scroll tracking (Deferred)
+        let maxScroll = 0;
+        let scrollTimer = null;
+
+        window.addEventListener('scroll', () => {
+            if (scrollTimer) clearTimeout(scrollTimer);
+            
+            scrollTimer = setTimeout(() => {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+
+                if (scrollPercent > maxScroll) {
+                    maxScroll = scrollPercent;
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'scroll', {
+                            'value': Math.round(maxScroll)
+                        });
+                    }
+                }
+            }, 100);
+        }, { passive: true });
+
+        // Smooth scroll for anchor links
+        document.addEventListener('click', (e) => {
+            const anchor = e.target.closest('a[href^="#"]');
+            if (anchor) {
+                e.preventDefault();
+                const target = document.querySelector(anchor.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    </script>
+</body>
+</html>
