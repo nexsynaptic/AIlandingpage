@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+<head> 
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://www.googletagmanager.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' data:;
+    connect-src 'self';
+    object-src 'none';
+    base-uri 'self';
+    frame-ancestors 'none';
+">
+   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="NexSynaptic - Ethical, transparent and human-centered AI platform. Build trustworthy AI systems with governance, compliance, and safety tooling.">
     <meta name="keywords" content="AI governance, AI compliance, EU AI Act, ethical AI, trustworthy AI, responsible AI">
